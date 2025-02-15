@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>One Vibes-Carrito</title>
+
+    
+
+    <!-- Vinculación con hojas de estilo y fuentes -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Luckiest+Guy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <script src="script.js"></script>
+    
+    <header> 
+        <div class="logo"> 
+        
+        </div>
+        
+        <h1 id="TituloPrincipal">One Vibes</h1>
+        <h2 id="subtitulo1">Old School & Akashic</h2>
+        
+        
+       
+        <nav>
+            <nav class="navbar">
+                <!-- Botón de menú hamburguesa -->
+                <button class="nav-button" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            
+                <!-- Menú desplegable dentro del botón -->
+                <ul class="nav-links" id="menu-mobile">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="remeras.html">Remeras</a></li>
+                    <li><a href="buzos.html">Buzos</a></li>
+                </ul>
+            </nav>
+        
+            
+        
+            <div class="search-container">
+                <input type="text" placeholder="Buscar..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>  <!-- Botón de búsqueda -->
+            </div>
+            <button class="nav-button">
+                <a href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+                <span id="carrito-contador">0</span>
+            </button>
+        </nav>
+        
+        
+        
+        
+        </header>
+       
+    
+        <section id="carrito">
+            <div id="productos-carrito"></div>
+            <p id="total"></p>
+        
+            <!-- Datos de Envío -->
+            <div id="datos-envio">
+                <h2>Datos de Envío</h2>
+                <input type="text" id="nombre" placeholder="Nombre Completo">
+                <input type="text" id="direccion" placeholder="Dirección">
+                <input type="tel" id="telefono" placeholder="Teléfono">
+                <button id="btnSiguiente" disabled>Siguiente</button>
+            </div>
+        
+            <!-- Selección de Método de Pago -->
+            <div class="container hidden" id="pagoContainer">
+                <h2>Seleccione Método de Pago</h2>
+                <select id="metodoPago">
+                    <option value="">Seleccione...</option>
+                    <option value="credito">Tarjeta de Crédito</option>
+                    <option value="debito">Tarjeta de Débito</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                    <option value="mercadoPago">Mercado Pago</option>
+                </select>
+            </div>
+        
+            <!-- Datos de Tarjeta -->
+            <div class="container hidden" id="tarjetaContainer">
+                <h2>Datos de la Tarjeta</h2>
+                <input type="text" id="numeroTarjeta" placeholder="Número de Tarjeta">
+                <input type="text" id="vencimiento" placeholder="MM/AA">
+                <input type="text" id="cvv" placeholder="CVV">
+                <button id="btnProcesarPago" disabled>Procesar Pago</button>
+            </div>
+        
+            <!-- Datos para Transferencia -->
+            <div class="container hidden" id="transferenciaContainer">
+                <h2>Datos para Transferencia</h2>
+                <p>Banco: XYZ</p>
+                <p>CBU: 1234567890123456789012</p>
+                <p>Alias: empresa.xyz</p>
+                <p>Una vez realizada la transferencia, envíe el comprobante a pagos@empresa.com</p>
+            </div>
+        </section>
+        
+
+    
+
+</body>
+</html>

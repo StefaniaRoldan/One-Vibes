@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+<head>
+    <title>One Vibes</title>
+
+    
+
+    <!-- Vinculación con hojas de estilo y fuentes -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Luckiest+Guy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="Logos/logo final.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <script src="script.js"></script>
+
+<header> 
+    <a href="https://wa.me/549XXXXXXXXX" target="_blank" class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-img">
+      </a>
+      <a href="https://www.instagram.com/_onevibes_/" target="_blank" class="instagram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="instagram-img">
+      </a>
+
+<h1 id="TituloPrincipal">One Vibes</h1>
+<h2 id="subtitulo1">Old School & Akashic</h2>
+
+
+<nav>
+    <nav class="navbar">
+        <!-- Botón de menú hamburguesa -->
+        <button class="nav-button" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Menú desplegable dentro del botón -->
+        <ul class="nav-links" id="menu-mobile">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="remeras.html">Remeras</a></li>
+            <li><a href="buzos.html">Gorras</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <div class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button"><i class="fas fa-search"></i></button>  <!-- Botón de búsqueda -->
+    </div>
+    <button class="nav-button">
+        <a href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+        <span id="carrito-contador">0</span>
+    </button>
+</nav>
+
+
+
+
+
+
+</header>
+ 
+    
+   
+    </main>
+    <section class="categoria old-school">
+        <h2 id="Old">Old School</h2>
+        
+        
+        <section class="categoria old-school-Clasico">
+            <h3 id="Old">Remeras Corte Clasico Unisex</h3>
+            <button class="ver-mas" onclick="mostrarProductos('Old')">Ver más</button>
+            <button class="arrow left" onclick="scrollLeft('old-school-clasico')">&#9664;</button>
+        <button class="arrow right" onclick="scrollRight('old-school-clasico')">&#9654;</button>
+        <div class="productos" id="productosOld" style="display: none;">
+            
+            <div class="producto">
+                <img src="old school/Barco adelante.png" alt="Chicana">
+                <h3>Barco Style</h3>
+                <p>$25.000</p>
+                
+                <!-- Selector de color -->
+                <label for="color-chican">Color:</label>
+                <select id="color-chican">
+                    <option value="negro">Negro</option>
+                    <option value="blanco">Blanco</option>
+                    
+                </select>
+    
+                <!-- Selector de talle -->
+                <label for="talle-chican">Talle:</label>
+                <select id="talle-chican">
+                    <option value="XL">XL</option>
+                </select>
+                <button class="agregar-carrito">Agregar al Carrito</button>
+                
+            </div>
+            <div class="producto">
+                <img src="old school/gato samurai 1.png" alt="Chicana">
+                <h3>Cat samurai</h3>
+                <p>$25.000</p>
+                
+                <!-- Selector de color -->
+                <label for="color-chican">Color:</label>
+                <select id="color-chican">
+                    <option value="negro">Negro</option>
+                    <option value="blanco">Blanco</option>
+                    
+                </select>
+    
+                <!-- Selector de talle -->
+                <label for="talle-chican">Talle:</label>
+                <select id="talle-chican">
+                    <option value="XL">L</option>
+                </select>
+    
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="old school/CIRCULO DRAGON 1.png" alt="Chicana">
+                <h3>Dragon</h3>
+                <p>$25.000</p>
+                
+                <!-- Selector de color -->
+                <label for="color-chican">Color:</label>
+                <select id="color-chican">
+                    <option value="blanco">Blanco</option>
+                    
+                </select>
+    
+                <!-- Selector de talle -->
+                <label for="talle-chican">Talle:</label>
+                <select id="talle-chican">
+                    <option value="XL">L</option>
+                </select>
+    
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="old school/ballena 2.png" alt="Chicana">
+                <h3>Ballena</h3>
+                <p>$25.000</p>
+                
+                <!-- Selector de color -->
+                <label for="color-chican">Color:</label>
+                <select id="color-chican">
+                    <option value="blanco">Blanco</option>
+                    
+                </select>
+    
+                <!-- Selector de talle -->
+                <label for="talle-chican">Talle:</label>
+                <select id="talle-chican">
+                    <option value="XL">XL</option>
+                </select>
+    
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="old school/tibueron 1.png" alt="Chicana">
+                <h3>tiburon</h3>
+                <p>$25.000</p>
+                
+                <!-- Selector de color -->
+                <label for="color-chican">Color:</label>
+                <select id="color-chican">
+                    <option value="blanco">Negro</option>
+                    
+                </select>
+    
+                <!-- Selector de talle -->
+                <label for="talle-chican">Talle:</label>
+                <select id="talle-chican">
+                    <option value="XL">XL</option>
+                </select>
+    
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+        </div>
+
+      
+    </section>
+
+    <section class="categoria old-school-Overside">
+        <h2 id="Old">Remeras Oversize</h2>
+        <button class="ver-mas" onclick="mostrarProductos('Old')">Ver más</button>
+        <div class="productos">
+        <div class="producto">
+            <img src="old school/Gato prendido fuego.png" alt="Remera Old School">
+            <h3>Cat on fire</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Negro</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">L</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="old school/medusa 2.png" alt="Remera Old School">
+            <h3>Medusa</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Negro</option>
+                <option value="negro">Blanco</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">L</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="old school/pulpo1.png" alt="Remera Old School">
+            <h3>Pulpo</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Blanco</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">L</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="old school/tibueron 1.png" alt="Remera Old School">
+            <h3>Tiburon</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Blanco</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">XL</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="old school/ipo calavera 1.png" alt="Remera Old School">
+            <h3>Hipo Calavera</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Blanco</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">XL</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="old school/ballena 2.png" alt="Remera Old School">
+            <h3>Ballena</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Negro</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">XL</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="old school/olas y montañas rem.png" alt="Remera Old School">
+            <h3>Olas y montañas</h3>
+            <p>$27.000</p>
+            
+            <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Negro</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">XL</option>
+                
+            </select>
+
+            <button class="agregar-carrito">Agregar al Carrito</button>
+        </div>
+        </div>
+    </section>
+</section>
+
+    <!-- Sección Akashic -->
+    <section class="categoria akashic">
+        <h2 id="Akashic">Akashic</h2>
+        
+        <section class="categoria akashic">
+        <h3 id="Akashic">Remeras Akashic Corte Clasico Unisex</h3>
+        <button class="ver-mas" onclick="mostrarProductos('Akashic')">Ver más</button>
+        <div class="productos" id="productosAkashic" style="display: none;">
+            <div class="producto">
+                <img src="akashic/chakras al costado.png" alt="Remera Akashic">
+                <h3>Chakras</h3>
+                <p>$25.000</p>
+                 <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Blanco</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">M</option>
+                
+            </select>
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="akashic/chakras con frases.png" alt="Pulsera Akashic">
+                <h3>Chakras</h3>
+                <p>$25.000</p>
+
+                  <!-- Selector de color -->
+            <label for="color-mexican">Color:</label>
+            <select id="color-mexican">
+                <option value="negro">Blanco</option>
+                
+            </select>
+
+            <!-- Selector de talle -->
+            <label for="talle-mexican">Talle:</label>
+            <select id="talle-mexican">
+                
+                <option value="L">M</option>
+                
+            </select>
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+</main>
+
+   
+
+
+
+
+
+   
+  
+
+
+
+
+  
+    <footer>
+
+  
+
+       
+        <h5><i class="fa-solid fa-location-dot"> </i>Mar del Plata,Buenos Aires,Argetina.</h5>
+        <h5><i class="fa-solid fa-envelope"></i>onevibes.info@gmail.com</h5>
+        <h5>© 2025 One Vibes - Todos los derechos reservados</h5>
+        
+    </footer>
+</footer>
+
+</body>
+</html>
