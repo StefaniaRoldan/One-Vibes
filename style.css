@@ -1,4 +1,286 @@
-/* Estilos generales */
+[12:36, 17/2/2025] Stefi_: body{
+    background-image: url(Imagenes/fondo.PNG);
+}
+
+h1 {
+    font-family: "Grenze Gotisch", serif;
+    font-size: 100px;
+    text-shadow: 4px 4px 4px whitesmoke;
+    margin: 0; /* Eliminar márgenes para mejor alineación */
+    text-align: center; /* Centrar el texto */
+}
+
+#TituloPrincipal {
+    left: 0;
+    animation: moverDeDerechaAIzquierda 10s linear infinite;
+    white-space: nowrap; /* Evitar que el texto se rompa */
+}
+  
+  @keyframes moverDeDerechaAIzquierda {
+    0% {
+      left: 100%; /* Comienza desde el extremo derecho */
+    }
+    50% {
+      left: 50%; /* Llega al centro */
+      transform: translateX(-50%); /* Ajuste para centrar el texto */
+    }
+    100% {
+      left: -100%; /* Llega al extremo izquierdo */
+    }
+  }
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    text-shadow: 4px 4px 4px whitesmoke;
+    margin: 5px 0 0 0; /* Espacio entre el h1 y h2 */
+    text-align: center; /* Centrar el texto */
+}
+
+header {
+    
+    width: 100%;
+    height: auto; /* Ajusta la altura según el contenido */
+    padding: 20px 0; /* Añade espacio interno arriba y abajo */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Coloca h1 y h2 en columna */
+    border-radius: 15px; /* Bordes redondeados */
+    border:2px solid rgb(63, 1, 1);
+    box-shadow:0px 4px 8px rgba(225, 19, 19, 0.2);
+    margin-bottom: 50px;
+}
+
+nav {
+    position: absolute; /* Posición precisa */
+    top: 10px; /* Margen superior */
+    right: 10px; /* Margen derecho */
+    display: flex; /* Alinea los elementos en fila */
+    gap: 10px; /* Espacio entre botones */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+/* Botones sin fondo */
+.nav-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor */
+    font-size: 24px; /* Tamaño del icono */
+    color: whitesmoke; /* Color del icono */
+}
+
+/* Contenedor del buscador */
+.search-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(209, 59, 177); /* Línea decorativa */
+    padding: 5px;
+}
+
+/* Input de búsqueda oculto por defecto */
+.search-input {
+    display: none; /* Ocultar el campo de búsqueda */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 120px;
+    padding: 5px;
+    background: none;
+    color: whitesmoke;
+}
+
+/* Cuando el input está activo, se muestra */
+.search-input.active {
+    display: inline-block;
+    background-color: whitesmoke;
+}
+
+/* Botón de búsqueda sin fondo */
+.search-button {
+    
+
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor */
+    font-size: 24px; /* Tamaño del icono */
+    color: whitesmoke; /* Color del icono */
+}
+h5{
+    font-family: "Playfair Display", serif;
+    font-size: 10px;
+    color: white; /* Texto blanco */
+    text-shadow: 4px 4px 4px whitesmoke;
+    border: 2px  whitesmoke;
+
+}
+h3{
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: white; /* Texto blanco */
+    text-shadow: 4px 4px 4px whitesmoke;
+    border: 2px  whitesmoke;
+
+}
+
+p{
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: white; /* Texto blanco */
+    text-shadow: 4px 4px 4px whitesmoke;
+    border: 2px  whitesmoke;
+
+}
+footer {
+    width: 1240px;
+    height: 150px;
+    background-color:rgb(209, 59, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column; /* Centra el contenido verticalmente */
+    border-radius: 15px; /* Bordes redondeados */
+    border:2px solid rgb(63, 1, 1);
+    box-shadow:0px 4px 8px rgba(225, 19, 19, 0.2);
+    
+}
+/* Secciones */
+.categoria {
+    position: relative;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.productos-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.productos {
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    scroll-behavior: smooth; /* Suaviza el scroll */
+    gap: 20px;
+    padding: 10px;
+    white-space: nowrap;
+    position: relative; /* Para que las flechas sean relativas a este */
+    display: none; /* Inicialmente oculto */
+}
+
+.producto {
+    display: flex; /* Asegura que los elementos internos se organicen en columna */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    color: #d13bb1;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    background-color: black;
+    text-align: center;
+    flex: 0 0 auto; /* Mantiene el ancho fijo */
+    min-height: 320px; /* Ajusta la altura mínima para mantener uniformidad */
+}
+
+.producto img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto select, 
+.producto label {
+    display: block; /* Asegura que cada elemento esté en su propia línea */
+    width: 100%;
+    text-align: center;
+}
+
+.producto button {
+    font-family: "Playfair Display", serif;
+    background-color: #d13bb1;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 15px; /* Ajuste dinámico según el contenido */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Empuja el botón hacia abajo */
+    white-space: nowrap; /* Evita que el texto del botón se divida en varias líneas */
+}
+
+.producto button:hover {
+    background-color: #a82890;
+}
+
+/* Contenedor para las flechas */
+.contenedor-productos {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: -30px; /* Ajusta según diseño */
+}
+
+.arrow.right {
+    right: -30px; /* Ajusta según diseño */
+}
+
+/* Ajustes para que las flechas no desaparezcan */
+.categoria {
+    position: relative; /* Asegura que las flechas sean relativas a este contenedor */
+}
+
+
+#Old {
+    font-family: "Grenze Gotisch", serif;
+    font-size: 50px !important;
+    color: white !important;
+    text-shadow: 4px 4px 4px whitesmoke !important;
+    text-align: center !important;
+
+
+}
+
+#Akashic{
+    font-family: "Playfair Display", serif;
+    font-size: 50px !important;
+    color: white !important;
+    text-shadow: 4px 4px 4px whitesmoke !important;
+    text-align: center !important;
+}
+select {
+    font-family: "Playfair Display", serif;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+}
+label{
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    …
+[14:18, 17/2/2025] Stefi_: /* Estilos generales */
 body {
     font-family: "Playfair Display", serif;
     color: white;
