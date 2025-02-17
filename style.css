@@ -511,3 +511,59 @@ button:disabled {
     object-fit: contain;
     border-radius: 50%;
 }
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Menú de navegación responsive */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Productos en columnas en móviles */
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    
+    .producto {
+        width: 100%;
+        max-width: 200px;
+        margin: auto;
+    }
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste de textos */
+    h2#Old, h2#Akashic {
+        font-size: 30px !important;
+    }
+
+    /* Botón de agregar al carrito adaptado */
+    .producto button {
+        width: auto;
+        min-width: 120px;
+        padding: 8px;
+    }
+}
