@@ -272,3 +272,4 @@ function mostrarProductos(categoria) {
       botonVerMas.textContent = 'Ver más'; // Volver al texto original del botón
     }
   }
+  
