@@ -1,4 +1,4 @@
-[12:36, 17/2/2025] Stefi_: body{
+body{
     background-image: url(Imagenes/fondo.PNG);
 }
 
@@ -279,116 +279,346 @@ select {
 label{
     font-family: "Playfair Display", serif;
     font-size: 15px;
-    …
-[14:18, 17/2/2025] Stefi_: /* Estilos generales */
-body {
-    font-family: "Playfair Display", serif;
-    color: white;
+    color: white; /* Texto blanco */
     text-shadow: 4px 4px 4px whitesmoke;
-    background-color: black;
-    margin: 0;
-    padding: 0;
+    border: 2px  whitesmoke;
+    margin-bottom: 10px;
 }
 
-h1, h3, h5, p, label {
-    font-family: "Playfair Display", serif;
+#carrito-contador {
+    background-color: red;
     color: white;
-    text-shadow: 4px 4px 4px whitesmoke;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 8px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: none; /* Ocultar cuando está en 0 */
 }
 
-/* Contenedor principal */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
 
-/* Estilos para navegación */
+
+/* Estilos generales del navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.navbar a {
+    padding: 10px 20px;
     color: white;
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s, color 0.3s;
+    position: relative;
 }
 
-.navbar a:hover {
-    background-color: rgba(255, 69, 0, 0.8); /* color similar al del botón */
+/* Botón hamburguesa */
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 24px;
     color: white;
+    cursor: pointer;
+    position: relative;
 }
 
-/* Flexbox para productos */
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.producto {
-    width: 100%;
-    max-width: 300px;
+/* Estilos del menú desplegable */
+.nav-links {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color:#a82890; ;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    width: 120px;
     text-align: center;
-    border: 1px solid #444;
+}
+
+.nav-links li {
+    padding: 8px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+}
+
+/* Mostrar menú cuando se active */
+.nav-links.mostrar {
+    display: block;
+}
+/* ✅ Estilos del Carrito */
+#carrito {
+    background-color: #c02393; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Centrar la sección */
+    width: 80%; /* Ajustar ancho */
+    max-width: 600px; /* Máximo ancho */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* ✅ Estilos para los inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* ✅ Botón de "Siguiente" */
+#btnSiguiente {
+    background: #5a013e;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#btnSiguiente:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* ✅ Estilos para la sección de Métodos de Pago */
+#pagoContainer,
+#tarjetaContainer,
+#transferenciaContainer {
+    background: #f5f5f5;
     padding: 15px;
     border-radius: 10px;
-    background-color: #333;
-}
-
-/* Optimización de imágenes */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05); /* efecto de zoom */
-}
-
-/* Secciones */
-.section {
-    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
     text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Botones */
-button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+/* ✅ Estilos para el select de método de pago */
+#metodoPago {
+    width: 90%;
+    padding: 10px;
     border-radius: 5px;
     font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
-    background-color: #ff6347;
+/* ✅ Estilos para los datos de transferencia */
+#transferenciaContainer p {
+    font-size: 14px;
+    color: #333;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
+/* ✅ Botón de "Procesar Pago" */
+#btnProcesarPago {
+    background: #5a013e;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#btnProcesarPago:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* ✅ Ocultar secciones hasta que sean necesarias */
+.hidden {
+    display: none;
+}
+@keyframes flotante {
+    0%, 100% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
-    .productos {
+#Old, #Akashic {
+    animation: flotante 3s infinite ease-in-out;
+}
+
+
+button.ver-mas {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:#d13bb1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button.ver-mas:hover {
+    background-color: #555;
+  }
+
+  @media (max-width: 768px) {
+    .productos-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .producto {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para los íconos de WhatsApp e Instagram */
+.whatsapp-icon, .instagram-icon {
+    position: fixed; /* Para que se queden fijos en la pantalla */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la parte izquierda */
+    width: 40px;
+    height: 40px;
+    z-index: 1000; /* Asegura que los íconos estén por encima de otros elementos */
+    margin-right: 10px; /* Espacio entre los íconos */
+}
+
+.instagram-icon {
+    left: 60px; /* Desplaza el ícono de Instagram un poco más a la derecha */
+}
+
+.whatsapp-img, .instagram-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Menú de navegación responsive */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
+        background-color: black;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Productos en columnas en móviles */
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    
+    .producto {
+        width: 100%;
+        max-width: 200px;
+        margin: auto;
+    }
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste de textos */
+    h2#Old, h2#Akashic {
+        font-size: 30px !important;
+    }
+
+    /* Botón de agregar al carrito adaptado */
+    .producto button {
+        width: auto;
+        min-width: 120px;
+        padding: 8px;
+    }
+}
+
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Menú de navegación responsive */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Productos en columnas en móviles */
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    
+    .producto {
+        width: 100%;
+        max-width: 200px;
+        margin: auto;
+    }
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste de textos */
+    h2#Old, h2#Akashic {
+        font-size: 30px !important;
+    }
+
+    /* Botón de agregar al carrito adaptado */
+    .producto button {
+        width: auto;
+        min-width: 120px;
+        padding: 8px;
     }
 }
