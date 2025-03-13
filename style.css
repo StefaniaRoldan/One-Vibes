@@ -521,19 +521,27 @@ button:disabled {
 }
 /* Media queries para pantallas pequeñas */
 @media screen and (max-width: 768px) {
-    /* Menú de navegación responsive */
+    /* Estilos generales */
+    body {
+        padding: 10px;
+    }
+
+    /* Menú de navegación */
     .menu {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
+        position: fixed; /* Mantiene el menú fijo al hacer scroll */
+        top: 0;
         left: 0;
         width: 100%;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente */
+        z-index: 1000; /* Se mantiene por encima del contenido */
     }
+
     .menu.active {
         display: flex;
     }
+
     .menu-toggle {
         display: block;
         position: absolute;
@@ -542,122 +550,42 @@ button:disabled {
         font-size: 30px;
         color: white;
         cursor: pointer;
+        z-index: 1100;
     }
 
     /* Productos en columnas en móviles */
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-    
     .producto {
         width: 100%;
-        max-width: 200px;
-        margin: auto;
+        max-width: 100%;
+        margin-bottom: 15px;
+        text-align: center; /* Centrar contenido */
     }
+
     .producto img {
         width: 100%;
         height: auto;
         max-width: 100%;
-    height: auto;
-    display: block
+        display: block;
+        object-fit: cover; /* Evita que se deforme la imagen */
     }
 
     /* Ajuste de textos */
-    h2#Old, h2#Akashic {
-        font-size: 30px !important;
+    h2#Old, h2#Ak {
+        font-size: 28px;
+        text-align: center;
     }
 
-    /* Botón de agregar al carrito adaptado */
+    /* Ajuste de botones */
     .producto button {
-        width: auto;
-        min-width: 120px;
-        padding: 8px;
-    }
-}
-
-
-/* Media queries para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    /* Menú de navegación responsive */
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: black;
-    }
-    .menu.active {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-    }
-
-    /* Productos en columnas en móviles */
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-    
-    .producto {
         width: 100%;
         max-width: 200px;
-        margin: auto;
-    }
-    .producto img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Ajuste de textos */
-    h2#Old, h2#Akashic {
-        font-size: 30px !important;
-    }
-
-    /* Botón de agregar al carrito adaptado */
-    .producto button {
-        width: auto;
-        min-width: 120px;
-        padding: 8px;
-    }
-}
-
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    body {
         padding: 10px;
-    }
-    h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    .contenedor {
-        flex-direction: column;
-        align-items: center;
+        font-size: 14px;
     }
 }
 
 /* Para tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .contenedor {
         flex-wrap: wrap;
         justify-content: center;
