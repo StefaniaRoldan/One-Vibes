@@ -519,75 +519,53 @@ button:disabled {
     object-fit: contain;
     border-radius: 50%;
 }
-/* Media queries para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    /* Estilos generales */
-    body {
-        padding: 10px;
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas */
+        gap: 10px;
     }
 
-    /* Menú de navegación */
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: fixed; /* Mantiene el menú fijo al hacer scroll */
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente */
-        z-index: 1000; /* Se mantiene por encima del contenido */
+    .container {
+        padding: 20px; /* Reduce el padding en pantallas medianas */
     }
 
-    .menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        z-index: 1100;
-    }
-
-    /* Productos en columnas en móviles */
-    .producto {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 15px;
-        text-align: center; /* Centrar contenido */
-    }
-
-    .producto img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        display: block;
-        object-fit: cover; /* Evita que se deforme la imagen */
-    }
-
-    /* Ajuste de textos */
-    h2#Old, h2#Ak {
-        font-size: 28px;
+    header, footer{
         text-align: center;
-    }
-
-    /* Ajuste de botones */
-    .producto button {
-        width: 100%;
-        max-width: 200px;
-        padding: 10px;
-        font-size: 14px;
+        padding: 15px;
     }
 }
 
-/* Para tablets */
-@media (max-width: 1024px) {
-    .contenedor {
-        flex-wrap: wrap;
-        justify-content: center;
+@media (max-width: 480px) {
+    .checkbox-group {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .buttons input {
+        width: 100%; /* Botones ocupan todo el ancho */
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 15px; /* Ajusta el padding en pantallas muy pequeñas */
+    }
+
+    body {
+        font-size: 14px; /* Ajusta el tamaño de fuente para mejorar la legibilidad */
+    }
+        
+    section{
+        padding:10px;
+
+    }
+    body {
+        
+        padding:10px;
+        
+    }
+
+    header, footer {
+        text-align: center;
+        padding: 10px;
     }
 }
