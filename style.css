@@ -3,7 +3,11 @@ body{
     background-size: cover;  /* Hace que la imagen cubra toda la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+   
+
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word
 }
 
 h1 {
@@ -197,6 +201,9 @@ footer {
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block
 }
 
 .producto select, 
@@ -554,6 +561,9 @@ button:disabled {
     .producto img {
         width: 100%;
         height: auto;
+        max-width: 100%;
+    height: auto;
+    display: block
     }
 
     /* Ajuste de textos */
@@ -624,5 +634,32 @@ button:disabled {
         width: auto;
         min-width: 120px;
         padding: 8px;
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenedor {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
